@@ -1,12 +1,5 @@
-/* Estilos básicos */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-html, body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lobster&display=swap');
 
 * {
   margin: 0;
@@ -14,261 +7,221 @@ html, body {
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  width: 100%;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #FAF3E0; /* Fondo claro para resaltar secciones oscuras */
-  color: #000; /* Texto principal en negro */
-  min-width: 1024px;
-  width: 100%; /* Garantiza que el body no se expanda más allá de la pantalla */
-  overflow-x: hidden; /* Añadir para asegurar que no haya desbordamiento horizontal */
+  background-color: #FAF3E0;
+  color: #000;
 }
 
 header {
-    background-color: #022B3A;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  background-color: #022B3A;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
 nav {
-    position: sticky; /* Cambiado para que se quede fijo al hacer scroll */
-    top: 0; /* Fija la barra en la parte superior */
-    width: 100%; /* Ocupará todo el ancho de la página */
-    background: #1C3144; /* Gris oscuro complementario */
-    display: flex;
-    justify-content: center; /* Centra los enlaces */
-    align-items: center; /* Asegura que los elementos estén verticalmente alineados */
-    padding: 10px 0; /* Relleno superior e inferior */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para crear profundidad */
-    z-index: 10; /* Asegura que la barra de navegación esté por encima de otros contenidos */
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none; /* Elimina subrayado */
-    font-size: 1.2em; /* Tamaño de fuente adecuado */
-    margin: 0 20px; /* Espaciado entre enlaces */
-    text-transform: uppercase; /* Hace los enlaces en mayúsculas */
-    transition: all 0.3s ease; /* Animación suave para los cambios */
-  }
-  
-  nav a:hover {
-    color: #6c6c6c; /* Cambio de color al pasar el mouse por encima */
-    transform: scale(1.1); /* Efecto de aumento para darle un toque interactivo */
-  }
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #1C3144;
+  display: flex;
+  flex-direction: column; /* Se apila verticalmente */
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 10px 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #6c6c6c;
+  transform: scale(1.1);
+}
 
 #content {
-    padding-top: 80px; /* Espacio para menú fijo */
-    padding-bottom: 60px; /* Espacio para pie de página fijo */
+  padding-top: 20px;
+  padding-bottom: 60px;
 }
 
 .section {
-    display: none;
+  display: none;
 }
 
 .section.active {
-    display: block;
-    animation: fadeIn 0.5s ease; /* Añadido efecto fade-in */
+  display: block;
+  animation: fadeIn 0.5s ease;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 footer {
-    background: #022B3A; /* Fondo negro */
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+  background: #022B3A;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
 }
 
 #inicio {
-    text-align: center;
-    padding: 40px 20px; /* Reducir padding superior para moverlo hacia arriba */
-    margin-top: -100px; /* Desplazar más arriba */
-    color: #060528;
-  }
-  
-.rectangle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    background-color: #1A2B3C; /* Fondo más oscuro */
-    padding: 40px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, #1D3557, #457B9D);
-    max-width: 1100px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #555; /* Bordes sutiles */
-  }
-  
-  .rectangle:hover {
-    transform: translateY(-5px); /* Efecto de elevación */
-    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.7); /* Efecto de sombra más fuerte */
-  }
-  
-  .rectangle:before {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    width: calc(100% + 30px); /* Ampliamos el área para cubrir los cortes */
-    height: calc(100% + 30px); /* Ampliamos el área para cubrir los cortes */
-    background: rgba(255, 255, 255, 0.05); /* Fondo tenue */
-    border-radius: 20px;
-    z-index: -1;
-  }
-  
-  .rectangle:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Sombra extra en la parte inferior */
-    border-radius: 20px;
-    z-index: -2;
-  }
-  
-  .rectangle-image img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 5px solid #1C3144; /* Bordes sutiles alrededor de la imagen */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-  }
-  
-  .rectangle-image img:hover {
-    transform: scale(1.05); /* Efecto de zoom suave */
-  }
-  
-  .rectangle-text {
-    text-align: left;
-    max-width: 500px;
-  }
-  
-  .rectangle-text h2 {
-    font-size: 2.5rem;
-    color: #FFFFFF;
-    margin-bottom: 20px;
-    position: relative;
-  }
-  
-  .rectangle-text h2:after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 60px;
-    height: 4px;
-    background-color: #FFFFFF; /* Línea decorativa */
-  }
-  
-  .rectangle-text ul {
-    list-style: none;
-    font-size: 1.2rem;
-    color: #FFFFFF;
-  }
-  
-  .rectangle-text li {
-    margin-bottom: 15px;
-  }
-  
-  .rectangle-text a {
-    color: #bbb;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .rectangle-text a:hover {
-    color: #fff; /* Color claro al pasar el ratón */
-  }
+  text-align: center;
+  padding: 20px;
+  margin-top: 0;
+  color: #060528;
+}
 
-/* Boton*/
+.rectangle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, #1D3557, #457B9D);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #555;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rectangle:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.7);
+}
+
+.rectangle-image img {
+  width: 90%;
+  height: auto;
+  border-radius: 20px;
+  border: 5px solid #1C3144;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.rectangle-image img:hover {
+  transform: scale(1.05);
+}
+
+.rectangle-text {
+  text-align: center;
+  max-width: 95%;
+}
+
+.rectangle-text h2 {
+  font-size: 2rem;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.rectangle-text h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.rectangle-text ul {
+  list-style: none;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+.rectangle-text li {
+  margin-bottom: 10px;
+}
+
+.rectangle-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.rectangle-text a:hover {
+  color: #fff;
+}
+
 #scrollToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  display: block !important;
 }
 
 #scrollToTop:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
-#scrollToTop {
-    display: block !important; /* Asegura que el botón se muestre */
-}
-
-/* Sección contenedora en forma de rectángulo */
 .extra-info {
-  width: 80%;
-  margin: 50px auto;
-  padding: 40px;
+  width: 95%;
+  margin: 30px auto;
+  padding: 20px;
   background: linear-gradient(135deg, #1d3557, #457b9d);
   border-radius: 12px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Poppins', sans-serif; /* Fuente general */
+  font-family: 'Poppins', sans-serif;
 }
-  
-/* Efecto al pasar el cursor */
+
 .extra-info:hover {
   transform: translateY(-5px);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
-  
-/* Título principal llamativo */
+
 .extra-title {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
   color: #f8f9fa;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-family: 'Lobster', cursive; /* Fuente elegante para el título */
+  font-family: 'Lobster', cursive;
 }
-  
-/* Párrafos de información */
+
 .extra-text {
-  font-size: 20px;
+  font-size: 16px;
   color: #e9ecef;
   margin-bottom: 15px;
   line-height: 1.6;
-  font-family: 'Merriweather', serif; /* Nueva fuente para el texto */
+  font-family: 'Merriweather', serif;
   font-weight: 300;
 }
-  
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lobster&display=swap');
 
 .imagen-circular {
-  width: 100px;  /* Ajusta el tamaño según sea necesario */
+  width: 100px;
   height: 100px;
-  border-radius: 50%; /* Hace que la imagen sea circular */
-  object-fit: cover;  /* Ajusta la imagen sin deformarla */
-  border: 3px solid #fff; /* Borde opcional */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
