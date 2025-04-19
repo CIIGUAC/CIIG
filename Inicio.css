@@ -1,18 +1,24 @@
-/* Reset básico */
-
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #FAF3E0; /* Fondo claro para resaltar secciones oscuras */
-    color: #000; /* Texto principal en negro */
-    min-width: 1024px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #FAF3E0; /* Fondo claro para resaltar secciones oscuras */
+  color: #000; /* Texto principal en negro */
+  min-width: 1024px;
+  width: 100%; /* Garantiza que el body no se expanda más allá de la pantalla */
+  overflow-x: hidden; /* Añadir para asegurar que no haya desbordamiento horizontal */
 }
 
 header {
