@@ -187,13 +187,12 @@ footer {
 .hero-images img:hover {
   transform: scale(1.1); /* Agranda un poco al pasar el mouse */
 }
-
 .image-container {
   display: flex;
   justify-content: space-between;
-  width: 90%; /* Ajusta el ancho del contenedor */
-  position: absolute;
-  bottom: 20px; /* Mueve el contenedor hacia abajo */
+  gap: 10px;
+  width: 100%;
+  max-width: 100%; /* Cambiado a 100% para evitar que se estire demasiado */
 }
 
 .image-container .column {
