@@ -3,15 +3,15 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-  }
-  
-  * {
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #FAF3E0; /* Fondo claro para resaltar secciones oscuras */
@@ -19,7 +19,7 @@ html, body {
     min-width: 1024px;
     width: 100%; /* Garantiza que el body no se expanda más allá de la pantalla */
     overflow-x: hidden; /* Añadir para asegurar que no haya desbordamiento horizontal */
-  }
+}
 
 header {
     background-color: #022B3A;
@@ -40,7 +40,7 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para crear profundidad */
     z-index: 10; /* Asegura que la barra de navegación esté por encima de otros contenidos */
 }
-  
+
 nav a {
     color: white;
     text-decoration: none; /* Elimina subrayado */
@@ -50,7 +50,7 @@ nav a {
     font-weight: bold; /* Hace el texto en negrita */
     transition: all 0.3s ease; /* Animación suave para los cambios */
 }
-  
+
 nav a:hover {
     color: #6c6c6c; /* Cambio de color al pasar el mouse por encima */
     transform: scale(1.1); /* Efecto de aumento para darle un toque interactivo */
@@ -267,4 +267,4 @@ a:hover {
     object-fit: cover;  /* Ajusta la imagen sin deformarla */
     border: 3px solid #fff; /* Borde opcional */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
-  }
+}
