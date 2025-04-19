@@ -192,7 +192,7 @@ footer {
   justify-content: space-between;
   gap: 10px;
   width: 100%;
-  max-width: 100%; /* Cambiado a 100% para evitar que se estire demasiado */
+  max-width: 90%; /* Cambiado a 100% para evitar que se estire demasiado */
 }
 
 .image-container .column {
