@@ -1,0 +1,256 @@
+/* Estilos básicos para el diseño */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF3E0;
+    color: #2c2b2bc8; /* Color base para el texto */
+}
+
+header {
+    background-color: #022B3A;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    position: sticky; /* Cambiado para que se quede fijo al hacer scroll */
+    top: 0; /* Fija la barra en la parte superior */
+    width: 100%; /* Ocupará todo el ancho de la página */
+    background: #1C3144; /* Gris oscuro complementario */
+    display: flex;
+    justify-content: center; /* Centra los enlaces */
+    align-items: center; /* Asegura que los elementos estén verticalmente alineados */
+    padding: 10px 0; /* Relleno superior e inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para crear profundidad */
+    z-index: 10; /* Asegura que la barra de navegación esté por encima de otros contenidos */
+}
+  
+nav a {
+    color: white;
+    text-decoration: none; /* Elimina subrayado */
+    font-size: 1.2em; /* Tamaño de fuente adecuado */
+    margin: 0 20px; /* Espaciado entre enlaces */
+    text-transform: uppercase; /* Hace los enlaces en mayúsculas */
+    font-weight: bold; /* Hace el texto en negrita */
+    transition: all 0.3s ease; /* Animación suave para los cambios */
+}
+  
+nav a:hover {
+    color: #6c6c6c; /* Cambio de color al pasar el mouse por encima */
+    transform: scale(1.1); /* Efecto de aumento para darle un toque interactivo */
+}
+
+#content {
+    padding: 20px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+footer {
+    background: #022B3A; /* Fondo negro */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.books-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 50px; /* Espacio amplio entre los cuadros */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%; /* Más espacio para un diseño adaptable */
+    max-width: 1400px; /* Asegura que no desborde pantallas grandes */
+}
+
+.book {
+    position: relative;
+    border-radius: 15px;
+    width: 600px;
+    height: 450px;
+    background-color: #121212;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 2;
+    opacity: 1;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+.book:hover .cover {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    color: #f0f0f0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+    border-radius: 15px;
+    z-index: 10; /* Aumentamos el z-index */
+    opacity: 0;
+    pointer-events: none; /* Desactivamos interacción cuando no está visible */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.book:hover .details {
+    opacity: 1;
+    pointer-events: auto; /* Activamos la interacción al hacer hover */
+    transform: translate(-50%, -50%); /* Eliminamos el movimiento vertical */
+}
+
+.details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.details p {
+    font-size: 1rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.details a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #17314c;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details a:hover {
+    background-color: #1d2e41;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Enlace */
+a {
+    color: #ffffff; /* Rojo oscuro */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff; /* Rojo más brillante al pasar el ratón */
+}
+
+/* Sección contenedora en forma de rectángulo */
+.extra-info {
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* Fuente general */
+}
+    
+/* Efecto al pasar el cursor */
+.extra-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+    
+/* Título principal llamativo */
+.extra-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #f8f9fa;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: 'Lobster', cursive; /* Fuente elegante para el título */
+}
+    
+/* Párrafos de información */
+.extra-text {
+    font-size: 20px;
+    color: #e9ecef;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-family: 'Merriweather', serif; /* Nueva fuente para el texto */
+    font-weight: 300;
+}
+    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lobster&display=swap');
+
+.imagen-circular {
+    width: 100px;  /* Ajusta el tamaño según sea necesario */
+    height: 100px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover;  /* Ajusta la imagen sin deformarla */
+    border: 3px solid #fff; /* Borde opcional */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
+  }

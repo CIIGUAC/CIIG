@@ -1,0 +1,301 @@
+/* Estilos básicos para el diseño */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF3E0;
+}
+
+header {
+    background-color: #022B3A;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.extra-space {
+    height: 100px; /* Ajusta la altura según sea necesario */
+}
+
+nav {
+  position: sticky; /* Cambiado para que se quede fijo al hacer scroll */
+  top: 0; /* Fija la barra en la parte superior */
+  width: 100%; /* Ocupará todo el ancho de la página */
+  background: #1C3144; /* Gris oscuro complementario */
+  display: flex;
+  justify-content: center; /* Centra los enlaces */
+  align-items: center; /* Asegura que los elementos estén verticalmente alineados */
+  padding: 10px 0; /* Relleno superior e inferior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para crear profundidad */
+  z-index: 10; /* Asegura que la barra de navegación esté por encima de otros contenidos */
+}
+
+nav a {
+  color: white;
+  text-decoration: none; /* Elimina subrayado */
+  font-size: 1.2em; /* Tamaño de fuente adecuado */
+  margin: 0 20px; /* Espaciado entre enlaces */
+  text-transform: uppercase; /* Hace los enlaces en mayúsculas */
+  font-weight: bold; /* Hace el texto en negrita */
+  transition: all 0.3s ease; /* Animación suave para los cambios */
+}
+
+nav a:hover {
+  color: #6c6c6c; /* Cambio de color al pasar el mouse por encima */
+  transform: scale(1.1); /* Efecto de aumento para darle un toque interactivo */
+}
+
+#content {
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centra los bloques horizontalmente */
+    align-items: flex-start; /* Alinea los bloques al principio de la sección */
+    flex-direction: column; /* Asegura que los bloques estén apilados verticalmente */
+    min-height: calc(100vh - 180px); /* Usar min-height para asegurar que el contenido siempre tenga espacio */
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+footer {
+    background: #022B3A; /* Fondo negro */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.card li {
+  margin: 3px 0;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.card ul {
+  margin-top: 10px; /* Ajusta este valor según la separación que desees */
+}
+
+/* Boton*/
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+#scrollToTop:hover {
+    background-color: #555;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px; /* Aumentar separación entre tarjetas */
+}
+
+.card {
+  width: 25em; /* Tarjeta más ancha */
+  height: 35em; /* Tarjeta más alta */
+  background: linear-gradient(135deg, #1D3557, #457B9D);
+  transition: 1s ease-in-out;
+  clip-path: polygon(40px 0%, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0% 40px);
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  padding: 2em; /* Más espacio interno */
+  margin-bottom: 2.5em;
+  overflow: hidden; /* Evitar desbordamientos */
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif; /* Fuente principal */
+}
+
+.card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 2em; /* Más grande */
+  flex-shrink: 0;
+  margin-bottom: 0.5em;
+  font-family: 'Lobster', cursive; /* Fuente decorativa para los títulos */
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
+}
+
+.card .info {
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  margin: -1em 0; /* Reducir margen */
+  white-space: normal; /* Permitir salto de línea */
+  overflow: visible; /* Asegurar que el contenido sea visible */
+  text-overflow: unset; /* No cortar el texto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em; /* Agrandar */
+  font-weight: 500; /* Más grueso */
+  line-height: 1.4; /* Mejor separación */
+}
+
+.card .img {
+  width: 10em; /* Imagen más grande */
+  height: 10em;
+  margin: 0 auto 1.5em; /* Centrar y ajustar espacio inferior */
+  border-radius: 30px; /* Borde redondeado más pronunciado */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajuste perfecto para imágenes */
+}
+
+.card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em; /* Espaciado mayor entre íconos */
+  flex-shrink: 0;
+}
+
+.card .info:hover {
+  white-space: normal; /* Permite que el texto haga salto de línea */
+  overflow: visible; /* Muestra todo el contenido */
+  text-overflow: unset; /* Quita los puntos suspensivos */
+}
+
+.card a {
+  color: white;
+  transition: .4s ease-in-out;
+  font-size: 1.1em; /* Aumentar tamaño de los enlaces */
+}
+
+.card .img img:hover {
+  filter: brightness(1.2); /* Incrementa el brillo */
+  transform: scale(1.1); /* Amplía ligeramente la imagen */
+  transition: 0.4s ease; /* Transición suave */
+}
+
+.card .share a:hover {
+  transform: rotate(10deg); /* Rota ligeramente el ícono */
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.3); /* Sombra con un tono rojo */
+  transform: scale(1.05); /* Ligeramente más grande */
+  transition: 0.4s ease; /* Suavidad en la transición */
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.3); /* Sombra roja */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+  transition: 0.4s ease;
+}
+
+.card a:hover {
+  color: red;
+  text-shadow: 0 0 10px red; /* Brillo del enlace */
+  transform: translateY(-2px); /* Mueve ligeramente hacia arriba */
+  transition: 0.3s ease;
+}
+
+
+  .gmail-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5em; /* Espacio entre el logo y el texto */
+    color: white;
+    font-size: 1.5em;
+}
+
+.gmail-link:hover {
+    color: red; /* Cambia el color del texto al pasar el cursor */
+}
+
+.gmail-logo {
+    width: 3em; /* Tamaño del logo */
+    height: auto;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.gmail-link:hover .gmail-logo {
+    filter: drop-shadow(0 0 10px red); /* Efecto de brillo rojo */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Sección contenedora en forma de rectángulo */
+.extra-info {
+  width: 80%;
+  margin: 50px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #1d3557, #457b9d);
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Poppins', sans-serif; /* Fuente general */
+}
+
+/* Efecto al pasar el cursor */
+.extra-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Título principal llamativo */
+.extra-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f8f9fa;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: 'Lobster', cursive; /* Fuente elegante para el título */
+}
+
+/* Párrafos de información */
+.extra-text {
+  font-size: 20px;
+  color: #e9ecef;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-family: 'Merriweather', serif; /* Nueva fuente para el texto */
+  font-weight: 300;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lobster&display=swap');
+
+.card {
+  font-family: 'Poppins', sans-serif; /* Fuente principal */
+}
+
+.imagen-circular {
+  width: 100px;  /* Ajusta el tamaño según sea necesario */
+  height: 100px;
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  object-fit: cover;  /* Ajusta la imagen sin deformarla */
+  border: 3px solid #fff; /* Borde opcional */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
+}
