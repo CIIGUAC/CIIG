@@ -88,13 +88,13 @@ footer {
 
 .books-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
-    gap: 50px; /* Espacio amplio entre los cuadros */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Se adaptará a una columna si no hay espacio suficiente */
+    gap: 50px;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 90%; /* Más espacio para un diseño adaptable */
-    max-width: 1400px; /* Asegura que no desborde pantallas grandes */
+    width: 90%;
+    max-width: 1400px;
 }
 
 .book {
