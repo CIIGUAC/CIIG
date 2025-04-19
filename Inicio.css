@@ -1,24 +1,15 @@
-html, body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
+/* Reset básico */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #FAF3E0; /* Fondo claro para resaltar secciones oscuras */
-  color: #000; /* Texto principal en negro */
-  min-width: 1024px;
-  width: 100%; /* Garantiza que el body no se expanda más allá de la pantalla */
-  overflow-x: hidden; /* Añadir para asegurar que no haya desbordamiento horizontal */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #FAF3E0; /* Fondo claro para resaltar secciones oscuras */
+    color: #000; /* Texto principal en negro */
 }
 
 header {
@@ -187,12 +178,13 @@ footer {
 .hero-images img:hover {
   transform: scale(1.1); /* Agranda un poco al pasar el mouse */
 }
+
 .image-container {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
-  width: 100%;
-  max-width: 90%; /* Cambiado a 100% para evitar que se estire demasiado */
+  width: 90%; /* Ajusta el ancho del contenedor */
+  position: absolute;
+  bottom: 20px; /* Mueve el contenedor hacia abajo */
 }
 
 .image-container .column {
@@ -453,6 +445,7 @@ footer {
   border-bottom: 2px solid #0077cc;
   padding-bottom: 5px;
 }
+
 .cuadro p {
   margin: 0;
   color: #333;
@@ -460,8 +453,10 @@ footer {
   line-height: 1.7;
   font-family: 'Poppins', sans-serif;
 }
+
+
 .contenedor-inicio {
   display: flex;
   width: 100%;
-  height: auto;
+  height: 100vh;
 }
