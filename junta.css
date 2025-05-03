@@ -300,6 +300,25 @@ footer {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
 }
 
+/* Responsividad: Ajustes para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .mision-vision {
+    padding: 0 15px; /* Menos espacio lateral */
+  }
+
+  .cuadro {
+    padding: 20px; /* Menos relleno en pantallas pequeñas */
+  }
+
+  .cuadro h3 {
+    font-size: 1.4em; /* Ajuste del tamaño de los títulos */
+  }
+
+  .cuadro p {
+    font-size: 1em; /* Ajuste del tamaño del párrafo */
+  }
+}
+
 @media (max-width: 768px) {
   header img {
     width: 100px;
