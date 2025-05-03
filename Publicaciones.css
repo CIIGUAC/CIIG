@@ -268,35 +268,45 @@ a:hover {
     }
 
     .books-container {
-        grid-template-columns: 1fr; /* Solo una columna en móviles */
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
         gap: 30px;
     }
 
     .book {
-        width: 100%; /* Ocupar todo el ancho disponible */
-        height: auto; /* Altura automática para adaptarse al contenido */
+        width: 100%;
+        height: auto;
+        min-height: 400px; /* Asegura algo de altura */
+    }
+
+    .cover img {
+        height: 100%;
+        object-fit: cover;
     }
 
     .details {
-        width: 90%;
+        width: 95%;
         padding: 15px;
     }
 
     .extra-info {
-        width: 90%;
+        width: 95%;
         padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
     }
 
     .extra-title {
-        font-size: 26px;
+        font-size: 22px;
+        letter-spacing: 1px;
     }
 
     .extra-text {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.4;
     }
 
     .imagen-circular {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
 }
