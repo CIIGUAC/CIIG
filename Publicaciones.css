@@ -268,14 +268,15 @@ a:hover {
     }
 
     .books-container {
-        grid-template-columns: 1fr; /* Una sola columna en móviles */
+        grid-template-columns: 1fr;
         gap: 30px;
     }
 
     .book {
         width: 100%;
         height: auto;
-        min-height: 400px; /* Asegura algo de altura */
+        min-height: 400px;
+        flex-direction: column;
     }
 
     .cover img {
@@ -290,19 +291,24 @@ a:hover {
 
     .extra-info {
         width: 95%;
-        padding: 20px;
+        padding: 25px;
         margin: 20px auto;
         border-radius: 10px;
+        background: linear-gradient(135deg, #1a2c44, #335577); /* Mejora el contraste */
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
     }
 
     .extra-title {
-        font-size: 22px;
+        font-size: 24px;
         letter-spacing: 1px;
+        color: #ffffff; /* Asegura buen contraste */
     }
 
     .extra-text {
-        font-size: 15px;
-        line-height: 1.4;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #f1f1f1; /* Más claro */
+        text-align: justify;
     }
 
     .imagen-circular {
