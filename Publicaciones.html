@@ -1,171 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CIIG</title>
-    <link rel="icon" type="image/jpeg" href="Imagenes/LOGO.jpg">
+    <title>Publicaciones e Informes | CIIG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Publicaciones.css">
-
-<head>
+</head>
 <body>
 
-    <header>
-        <img src="Imagenes/LOGO.jpg" alt= "circulo de investigacion global" class="imagen-circular">
-        <h1>Publicaciones - CIIG</h1>
+    <header class="navbar">
+        <div class="nav-container">
+            <nav class="section-menu">
+                <ul class="nav-list">
+                    <li><a href="Inicio.html" class="nav-link">Inicio</a></li>
+                    <li><a href="Junta.html" class="nav-link">Junta</a></li>
+                    <li><a href="Miembros.html" class="nav-link">Miembros</a></li>
+                    <li><a href="Asesores.html" class="nav-link">Asesores</a></li>
+                    <li><a href="Publicaciones.html" class="nav-link active">Publicaciones</a></li>
+                </ul>
+            </nav>
+            <div class="logo-center">
+                <img src="Imagenes/LOGO.jpg" alt="Logo CIIG" class="main-logo">
+            </div>
+            <div class="social-aside">
+                <a href="https://www.instagram.com/ciig_ni/" class="social-btn">INSTAGRAM</a>
+                <a href="https://www.facebook.com/ciig.ni.2025" class="social-btn">FACEBOOK</a>
+                <a href="https://www.youtube.com/@ciig.uandina" class="social-btn">YOUTUBE</a>
+                <a href="https://www.tiktok.com/@ciig_uac" class="social-btn">TIKTOK  </a>
+            </div>
+        </div>
     </header>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="Junta.html">Junta Directiva</a></a>
-        <a href="Miembros.html">Miembros Activos</a>
-        <a href="Asesores.html">Asesores</a>
-        <a href="Publicaciones.html">Publicaciones</a>
-    </nav>
-
-    <section class="extra-info">
-        <h2 class="extra-title">📰 PUBLICACIONES CIIG 📰</h2>
-        <p class="extra-text">
-            En el  <strong>CIIG</strong> compartimos los eventos, logros y actividades más importantes que hemos realizado. Cada publicación refleja nuestro compromiso con la innovación, el desarrollo profesional y el crecimiento de nuestra comunidad.
-    </section>
-
-    <div class="books-container">
-        <div class="book">
-            <div class="cover">
-                <img src="PBIMG/Foto de taller 1.jpg" alt="Red de Negocios" />
+    <main class="publications-wrapper">
+        <section class="pub-hero">
+            <div class="container">
+                <span class="pub-badge">Archivo Académico</span>
+                <h1>Sala de <span class="highlight">Prensa & Reportes</span></h1>
+                <p>Explora nuestras actividades, investigaciones y el impacto generado por la comunidad CIIG en cada proyecto.</p>
             </div>
-            <div class="details">
-                <h3>Taller de liderazgo</h3>
-                <p>Este 31 de marzo realizamos nuestro taller de liderzago en el auditorio FCEAC 
-                    con ponentes como Dayron estudiante y al mgt. Andy Roy
-                </p>
-                <a href="" class="download-link" download>Descargar PDF</a>
+        </section>
+
+        <section class="articles-grid">
+            
+            <article class="pub-card">
+                <div class="pub-image">
+                    <img src="PBIMG/Foto de taller 1.jpg" alt="Taller de liderazgo">
+                    <span class="category-tag">Evento</span>
+                </div>
+                <div class="pub-content">
+                    <span class="pub-date">31 de Marzo, 2026</span>
+                    <h3>Taller de Liderazgo Estratégico</h3>
+                    <p>Realizado en el auditorio FCEAC con la participación magistral del Mgt. Andy Roy y ponentes destacados.</p>
+                    <div class="pub-actions">
+                        <a href="#" class="btn-download">
+                            <span class="icon">📄</span> Descargar Informe
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="pub-card">
+                <div class="pub-image">
+                    <img src="PBIMG/Convocatoria.jpg" alt="Convocatoria CIIG">
+                    <span class="category-tag">Convocatoria</span>
+                </div>
+                <div class="pub-content">
+                    <span class="pub-date">Marzo, 2026</span>
+                    <h3>Convocatoria: Artículos de Opinión</h3>
+                    <p>Invitación abierta a la comunidad universitaria para escribir sobre logística en negocios internacionales.</p>
+                    <div class="pub-actions">
+                        <a href="#" class="btn-download">
+                            <span class="icon">📄</span> Ver Bases
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="pub-card">
+                <div class="pub-image">
+                    <img src="PBIMG/CAENE.jpg" alt="CAENE">
+                    <span class="category-tag">Foro Regional</span>
+                </div>
+                <div class="pub-content">
+                    <span class="pub-date">20 de Noviembre, 2024</span>
+                    <h3>Foro de Alta Dirección: CAENE</h3>
+                    <p>Colaboración estratégica reuniendo a CEOs de empresas líderes como Hunt Oil y Natura.</p>
+                    <div class="pub-actions">
+                        <a href="PDF/8. INFORME CIIG - CAENE (1).pdf" class="btn-download" download>
+                            <span class="icon">📄</span> Informe CAENE
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="pub-card">
+                <div class="pub-image">
+                    <img src="PBIMG/Incuba Andina Lab.jpg" alt="Incuba Andina">
+                    <span class="category-tag">Innovación</span>
+                </div>
+                <div class="pub-content">
+                    <span class="pub-date">2024</span>
+                    <h3>Incuba Andina Lab: Proyecto Suillus</h3>
+                    <p>Emprendimiento premiado enfocado en nutrición y sostenibilidad mediante hongos de pino.</p>
+                    <div class="pub-actions">
+                        <a href="PDF/5.Informe CIIG INCUBA ANDINA LAB N°007 – 2024-I – CIIG - FCEAC UAC (7).pdf" class="btn-download" download>
+                            <span class="icon">📄</span> Ver Proyecto
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="pub-card">
+                <div class="pub-image">
+                    <img src="PBIMG/Rubik.png" alt="Torneo Rubik">
+                    <span class="category-tag">Habilidades</span>
+                </div>
+                <div class="pub-content">
+                    <span class="pub-date">15-16 de Marzo, 2024</span>
+                    <h3>Torneo Interdisciplinario de Cubo Rubik</h3>
+                    <p>Fomentando el pensamiento lógico y la creatividad con participación de competidores internacionales.</p>
+                    <div class="pub-actions">
+                        <a href="PDF/2. INFORME CIIG- TORNEO DE CUBOS RUBIK (2).pdf" class="btn-download" download>
+                            <span class="icon">📄</span> Resultados
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="Imagenes/LOGO.jpg" alt="CIIG Logo" class="footer-logo">
+                <p>Círculo de Investigación "Iniciativa Global". Innovación que trasciende fronteras.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="Inicio.html">Inicio</a></li>
+                    <li><a href="Junta.html">Junta Directiva</a></li>
+                    <li><a href="Miembros.html">Miembros</a></li>
+                    <li><a href="Asesores.html">Asesores</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>📍 Universidad Andina del Cusco</p>
+                <p>📧 contacto@ciig.com</p>
             </div>
         </div>
-
-        <div class="book">
-            <div class="cover">
-                <img src="PBIMG/Convocatoria.jpg" alt="Convocatoria" />
-            </div>
-            <div class="details">
-                <h3>Convocatoria</h3>
-                <p>El Círculo de Investigación Iniciativa Global (CIIG) 🎓✨ invita a docentes y estudiantes de cualquier 
-                    carrera a escribir un Artículo de Opinión sobre logística en los negocios internacionales. 🏆✨
-                </p>
-                <a href="" class="download-link" download>Descargar PDF</a>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CIIG. Excelencia en Investigación.</p>
         </div>
-
-        <div class="book">
-            <div class="cover">
-                <img src="PBIMG/CAENE.jpg" alt="CAENE" />
-            </div>
-            <div class="details">
-                <h3>CAENE</h3>
-                <p>El II Foro Regional de Alta Dirección Empresarial Cusco, organizado por el CIIG y la Escuela de Administración de Negocios 
-                    Internacionales de la Universidad Andina del Cusco en colaboración con CAENE, tuvo lugar el 20 de noviembre de 2024
-                </p>
-                <a href="PDF/8. INFORME CIIG - CAENE  (1).pdf" class="download-link" download>Descargar PDF</a>
-            </div>
-        </div>
-
-        <div class="book">
-            <div class="cover">
-                <img src="PBIMG/Emprende y Exporta.jpg" alt="Emprende y Exporta" />
-            </div>
-            <div class="details">
-                <h3>Emprende y Exporta</h3>
-                <p>La charla virtual "Emprende y Exporta", organizada por el Círculo de Investigación Iniciativa Global (CIIG)
-                    de la Universidad Andina del Cusco, se llevó a cabo el 11 de noviembre de 2024, con el objetivo de capacitar 
-                    y motivar a estudiantes y profesionales en comercio exterior.
-                </p>
-                <a href="PDF/7. INFORME CIIG - PERÚ EXPORTA TV  (1).pdf" class="download-link" download>Descargar PDF</a>
-            </div>
-        </div>
-
-        <div class="book">
-            <div class="cover">
-                <img src="PBIMG/RedNe.jpg" alt="Red de Negocios" />
-            </div>
-            <div class="details">
-                <h3>Red de Negocios</h3>
-                <p>El evento "Presentación de la Revista Red de Negocios Internacionales" organizado por el Círculo de Investigación Iniciativa Global
-                    de la Universidad Andina del Cusco tuvo como propósito promover la reflexión académica y profesional en negocios internacionales.
-                </p>
-                <a href="PDF/6. INFORME CIIG- PRESENTACIÓN DE REVISTA DE NEGOCIOS INTERNACIONALES (1).pdf" class="download-link" download>Descargar PDF</a>
-            </div>
-        </div>
-
-        <div class="book">
-            <div class="cover">
-                <img src="PBIMG/Incuba Andina Lab.jpg" alt="Incuba Andina Lab" />
-            </div>
-            <div class="details">
-                <h3>Incuba Andina Lab</h3>
-                <p>Emprendimiento sostenible desarrollado por el Círculo de Investigación Iniciativa Global (CIIG), 
-                    que articula comunidades altoandinas para producir alimentos saludables basados en hongos de pino (Suillus luteus).
-                </p>
-                <a href="PDF/5.Informe CIIG INCUBA ANDINA LAB N°007 – 2024-I – CIIG - FCEAC UAC (7).pdf" class="download-link" download>Descargar PDF</a>
-            </div>
-        </div>
-
-        <div class="book">
-            <div class="cover">
-                <img src="PBIMG/Feria de Emprendimientos.jpg" alt="Feria de Emprendimientos" />
-            </div>
-            <div class="details">
-                <h3>Feria de Emprendimientos</h3>
-                <p>El Círculo de Investigación Iniciativa Global (CIIG) destacó en la Feria de Emprendimientos 2024 organizada por la Universidad
-                    Andina del Cusco, presentando sus innovadoras galletas y crispys de hongos de pino (Suillus luteus).
-                </p>
-                <a href="PDF/4. Informe N°005 – 2024-I – CIIG - FCEAC UAC (7).pdf" class="download-link" download>Descargar PDF</a>
-            </div>
-        </div>
-
-        <div class="book">
-            <div class="cover">
-                <img src="PBIMG/Feria EmprendeFest.png" alt="Feria EmprendeFest" />
-            </div>
-            <div class="details">
-                <h3>Feria EmprendeFest</h3>
-                <p>El Feria EmprendeFest: Creciendo Juntos tuvo lugar el 9 de abril de 2024, destacando la participación del 
-                    Círculo de Investigación Iniciativa Global (CIIG) con productos innovadores como galletas y crispys de hongos de pino.
-                </p>
-                <a href="PDF/3. INFORME CIIG- PARTICIPACIÓN EN FERIA ANI.pdf" class="download-link" download>Descargar PDF</a>
-            </div>
-        </div>
-
-        <div class="book">
-            <div class="cover">
-                <img src="PBIMG/Rubik.png" alt="Cubo Rubik" />
-            </div>
-            <div class="details">
-                <h3>Torneo de Cubos Rubik</h3>
-                <p>El Torneo de Cubos Rubik se llevó a cabo los días 15 y 16 de marzo de 2024 en la Universidad Andina del Cusco, 
-                    organizado por los círculos de investigación CIIG y CRECE. Participaron 37 competidores, incluyendo niños y tres extranjeros.
-                </p>
-                <a href="PDF/2. INFORME CIIG- TORNEO DE CUBOS RUBIK (2).pdf" class="download-link" download>Descargar PDF</a>
-            </div>
-        </div>
-
-        <div class="book">
-            <div class="cover">
-                <img src="PBIMG/Primer informe.png" alt="Escuela de Líderes" />
-            </div>
-            <div class="details">
-                <h3>Escuela de Líderes</h3>
-                <p>El evento "Escuela de Líderes", organizado por la Universidad Andina del Cusco el 1 de marzo de 2024, 
-                    buscó inspirar habilidades de liderazgo en estudiantes. Contó con más de 200 asistentes y ponentes destacados 
-                    como Kevin Chumbes. Se resaltó el impacto positivo en los participantes y la colaboración entre diversos círculos académicos. 
-                </p>
-                <a href="PDF/1. INFORME CIIG - ESCUELA DE LIDERES.pdf" class="download-link" download>Descargar PDF</a>
-            </div>
-        </div>
-    </div>
-    
-
-    <footer>
-        <p>&copy; 2024 Círculo de Investigación CIIG. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>

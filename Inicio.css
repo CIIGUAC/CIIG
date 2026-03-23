@@ -1,603 +1,265 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --bg-color: #ffffff;
+    --text-main: #1a1a1a;
+    --accent: #003b5c; /* Azul Institucional */
+    --gray-light: #f4f4f4;
+    --font-main: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #FAF3E0; /* Fondo claro para resaltar secciones oscuras */
-    color: #000; /* Texto principal en negro */
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
 }
 
-header {
-    background: #022B3A; /* Fondo negro representativo */
-    color: #fff;
-    justify-content: space-between;
-    padding: 20px 0;
-    text-align: center;
-}  
-
-
-header img {
-    width: 150px;
-    height: 80px;
-    display: block;
-  margin: 0 auto 10px;
+/* NAVBAR TRIPLE (Secciones - Logo - Redes) */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: var(--bg-color);
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+    padding: 15px 0;
 }
 
-nav {
-  position: sticky; /* Cambiado para que se quede fijo al hacer scroll */
-  top: 0; /* Fija la barra en la parte superior */
-  width: 100%; /* Ocupará todo el ancho de la página */
-  background: #1C3144; /* Gris oscuro complementario */
-  display: flex;
-  justify-content: center; /* Centra los enlaces */
-  align-items: center; /* Asegura que los elementos estén verticalmente alineados */
-  padding: 10px 0; /* Relleno superior e inferior */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para crear profundidad */
-  z-index: 10; /* Asegura que la barra de navegación esté por encima de otros contenidos */
-}
-
-nav a {
-  color: white;
-  text-decoration: none; /* Elimina subrayado */
-  font-size: 1.2em; /* Tamaño de fuente adecuado */
-  margin: 0 20px; /* Espaciado entre enlaces */
-  text-transform: uppercase; /* Hace los enlaces en mayúsculas */
-  font-weight: bold; /* Hace el texto en negrita */
-  transition: all 0.3s ease; /* Animación suave para los cambios */
-}
-
-nav a:hover {
-  color: #6c6c6c; /* Cambio de color al pasar el mouse por encima */
-  transform: scale(1.1); /* Efecto de aumento para darle un toque interactivo */
-}
-
-.hero {
-  width: 100%;
-  height: 400px; /* Ajusta la altura según sea necesario */
-  background: linear-gradient(135deg, rgba(28, 49, 68, 0.9), rgba(0, 0, 0, 0.6)), url('tu-imagen-de-fondo.jpg') no-repeat center center/cover;
-  color: #FFFFFF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center; /* Alineación del texto */
-}
-
-.hero h1 {
-  font-size: 3em; /* Tamaño de fuente grande */
-  font-weight: bold; /* Negrita */
-  letter-spacing: 1px; /* Espaciado de letras */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la visibilidad del texto */
-}
-
-.hero p {
-  font-size: 1.2em; /* Tamaño de fuente más pequeño para el texto adicional */
-  max-width: 80%; /* Limita el tamaño del párrafo */
-  margin: 20px 0;
-  line-height: 1.6;
-}
-
-
-.content {
-    padding: 20px;
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
 }
 
-.card {
-  background: #000; /* Fondo negro para coherencia visual */
-  border: 1px solid #444; /* Borde gris para resaltar */
-  border-radius: 8px;
-  width: 300px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  text-align: center;
-  color: #fff; /* Texto en blanco para contraste */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el efecto de hover */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 25px;
 }
 
-.card img {
-  width: 100%; /* Ajusta el ancho relativo a su contenedor */
-  height: 300px; /* Cambia este valor para hacerla más alta */
-  object-fit: cover; /* Asegura que la imagen se recorte proporcionalmente */
-  transition: opacity 0.3s ease; /* Transición para el cambio de opacidad */
+.nav-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
-/* Efectos de hover para la tarjeta */
-.card:hover {
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño de la tarjeta al pasar el ratón */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+.nav-link:hover, .nav-link.active { color: var(--accent); }
+
+.main-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
 }
 
-/* Efecto en la imagen al pasar el ratón */
-.card:hover img {
-  opacity: 0.85; /* Disminuye la opacidad de la imagen al pasar el ratón */
+.social-aside {
+    display: flex;
+    gap: 15px;
 }
 
-/* Título de la tarjeta */
-.card h3 {
-  padding: 10px 0;
-  background: #222; /* Un gris oscuro para la cabecera de las tarjetas */
-  color: #fff;
+.social-btn {
+    text-decoration: none;
+    color: #999;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 5px;
+    transition: 0.3s;
 }
 
-/* Descripción de la tarjeta */
-.card p {
-  padding: 10px;
-}
+.social-btn:hover { color: var(--accent); }
 
-
-footer {
-    background: #022B3A; /* Fondo negro */
-    color: #fff;
+/* HERO MINIMAL */
+.hero-minimal {
+    padding: 100px 40px;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-    position: relative; /* Asegura que se respete su posición natural */
-    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000000;
-  text-align: center;
-  position: relative;
-  overflow: hidden; /* Para evitar imágenes o elementos fuera del contenedor */
+.badge {
+    background: var(--gray-light);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: var(--accent);
 }
 
-.hero-images {
-  display: flex;
-  gap: 50px; /* Espacio entre imágenes */
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0; /* Oculto al inicio */
-  animation: fadeInUp 2s ease-in-out forwards;
+h1 { font-size: 3.5rem; margin: 20px 0; line-height: 1.1; }
+.highlight { color: var(--accent); }
+
+.hero-actions { margin-top: 30px; display: flex; justify-content: center; gap: 20px; }
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
 }
 
-.hero-images img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%; /* Opcional: Hace que las imágenes sean circulares */
-  border: 2px solid #000000; /* Borde blanco */
-  transition: transform 0.3s ease; /* Suaviza el hover */
+.btn-outline {
+    border: 1px solid #ddd;
+    color: var(--text-main);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.hero-images img:hover {
-  transform: scale(1.1); /* Agranda un poco al pasar el mouse */
+/* GRID DE CONTENIDO */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 40px;
 }
 
-.image-container {
-  display: flex;
-  justify-content: space-between;
-  width: 90%; /* Ajusta el ancho del contenedor */
-  position: absolute;
-  bottom: 20px; /* Mueve el contenedor hacia abajo */
+.featured-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 30px;
 }
 
-.image-container .column {
-  display: flex;
-  flex-direction: column;
-  gap: 70px; /* Espacio entre las imágenes de cada columna */
+.info-box {
+    background: var(--gray-light);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
-.image-container img {
-  width: 400px; /* Aumenta el tamaño de las imágenes */
-  height: auto; /* Mantén la proporción */
-  object-fit: cover; /* Recorta la imagen si es necesario */
-  border-radius: 8px; /* Esquinas redondeadas */
-  border: 3px solid #fff;
-}
+.info-box h3 { border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 15px; }
 
-@keyframes fadeInUp {
-  0% {
-    transform: translate(-50%, 50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(-50%, 0);
-    opacity: 1;
-  }
-}
-
+/* BOTÓN SCROLL */
 #scrollToTop {
     position: fixed;
-    bottom: 60px;
-    right: 20px;
-    background: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: var(--accent);
+    color: white;
     border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    border-radius: 5px;
     cursor: pointer;
-    display: none; /* Ocultarlo por defecto */
-    justify-content: center;
+    display: none;
+}
+
+/* FOOTER GENERAL */
+.main-footer {
+    background-color: #01161E; /* Azul oscuro profundo */
+    color: #ffffff;
+    padding: 60px 20px 20px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CONTENEDOR QUE CENTRA EL CONTENIDO */
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Esto separa las columnas uniformemente */
+    gap: 40px;
+    flex-wrap: wrap; /* Para que en celular se pongan uno debajo de otro */
+}
+
+/* ESTILO DE CADA COLUMNA */
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h4 {
+    color: #00A6FB; /* Color de acento */
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* AJUSTES DE LOS ÍTEMS DE CONTACTO */
+.contact-item {
+    display: flex;
     align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
 }
 
-/* for all social containers*/
-.socialContainer {
-  width: 52px;
-  height: 52px;
-  border-radius: 5px;
-  background-color: rgb(28, 49, 68);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-}
-/* instagram*/
-.containerOne:hover {
-  background-color: #e0307f;
-  transition-duration: 0.3s;
-}
-/* Youtube*/
-.containerTwo:hover {
-  background-color: #c00101e3;
-  transition-duration: 0.3s;
-}
-/* Facebook*/
-.containerThree:hover {
-  background-color: #1877f2;
-  transition-duration: 0.3s;
-}
-/* Whatsapp*/
-.containerFour:hover {
-  background-color: green;
-  transition-duration: 0.3s;
+.contact-item .icon {
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
-/* Tiktok*/
-
-.containerT:hover {
-  background-color: #0cc3cd; /* Cambia a blanco al pasar el mouse */
+.contact-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #d1d1d1;
 }
 
-
-.socialContainer:active {
-  transform: scale(0.9);
-  transition-duration: 0.3s;
+/* LOGO Y MARCA */
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #00A6FB;
+    margin-bottom: 15px;
 }
 
-.socialSvg {
-  width: 19px;
-}
-.largeIcon {
-  width: 27px; /* Ancho específico solo para el icono de TikTok */
-}
-.socialSvg path {
-  fill: rgb(255, 255, 255);
+.brand h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
 }
 
-.socialContainer:hover .socialSvg {
-  animation: slide-in-top 0.3s both;
+.brand p {
+    font-size: 0.85rem;
+    color: #aaa;
+    line-height: 1.5;
 }
 
-@keyframes slide-in-top {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.socialIcons {
-  display: flex;
-  justify-content: flex-end; /* Esto alinea los elementos a la derecha */
-  gap: 10px; /* Espaciado entre los íconos */
+/* ENLACES */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
 }
 
-.image-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px; /* Espacio entre las imágenes */
-  width: 100%; /* Asegura que ocupe el 100% del ancho */
-  max-width: 1200px; /* Limita el ancho máximo para que no se estiren mucho */
+.footer-column ul li {
+    margin-bottom: 10px;
 }
 
-/* Efecto cuando se pasa el ratón sobre la imagen */
-.image-container img:hover {
-  transform: scale(1.05); /* Aumenta el tamaño de la imagen */
-  opacity: 0.9; /* Reduce la opacidad para un efecto visual */
+.footer-column ul li a {
+    color: #d1d1d1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
 }
 
-.Inicio {
-  display: flex;
-  flex-direction: column; /* Esto permite que "arriba" y "mision-vision" se apilen */
-  width: 100%;
-  justify-content: space-between;
+.footer-column ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px;
 }
 
-
-.panel {
-  width: 40%;
-  padding: 50px;
-  background-color: #003b5c;
-  color: white;
-  box-sizing: border-box;
-  overflow-y: auto;
+/* BARRA INFERIOR */
+.footer-bottom {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
 }
 
-.panel h1 {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 15px; /* Espacio debajo del título */
-  font-size: 2em; /* Ajustar tamaño si es necesario */
-}
-
-.panel h3 {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 20px; /* Espacio debajo del subtítulo */
-  font-size: 1.5em;
-}
-
-.panel p {
-  text-align: left;
-  margin-top: 10px; /* Espacio arriba del párrafo */
-  line-height: 1.6; /* Mejor lectura */
-}
-
-
-.Fotoinicio {
-  width: 65%;
-  height: auto;
-  overflow: hidden;
-}
-
-.Fotoinicio img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Sección contenedora en forma de rectángulo */
-.extra-info {
-  width: 80%;
-  margin: 50px auto;
-  padding: 40px;
-  background: linear-gradient(135deg, #1d3557, #457b9d);
-  border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efecto al pasar el cursor */
-.extra-info:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Título principal llamativo */
-.extra-title {
-  font-size: 32px;
-  font-weight: bold;
-  color: #f8f9fa;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
-
-/* Párrafos de información */
-.extra-text {
-  font-size: 20px;
-  color: #e9ecef;
-  margin-bottom: 15px;
-  line-height: 1.6;
-  font-family: 'Poppins', sans-serif;
-}
-
-.imagen-circular {
-  width: 100px;  /* Ajusta el tamaño según sea necesario */
-  height: 100px;
-  border-radius: 50%; /* Hace que la imagen sea circular */
-  object-fit: cover;  /* Ajusta la imagen sin deformarla */
-  border: 3px solid #fff; /* Borde opcional */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
-}
-
-.mision-vision {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin: 60px auto;
-  padding: 0 30px;
-  max-width: 900px;
-}
-
-.cuadro {
-  background: linear-gradient(135deg, #ffffff, #f2f7ff);
-  padding: 30px;
-  border-left: 6px solid #0077cc;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cuadro:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-}
-
-.cuadro h3 {
-  margin: 0 0 15px 0;
-  color: #003366;
-  font-size: 1.6em;
-  border-bottom: 2px solid #0077cc;
-  padding-bottom: 5px;
-}
-
-.cuadro p {
-  margin: 0;
-  color: #333;
-  font-size: 1.1em;
-  line-height: 1.7;
-  font-family: 'Poppins', sans-serif;
-}
-
-
-.contenedor-inicio {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-}
-
-/* Contenedor de Misión y Visión */
-.mision-vision {
-  display: flex;
-  flex-direction: column; /* Apila las cajas de misión y visión */
-  gap: 30px; /* Espaciado entre los elementos */
-  margin: 60px auto;
-  padding: 0 30px;
-  max-width: 900px; /* Limita el ancho de la sección */
-}
-
-/* Estilo de las cajas de Misión y Visión */
-.cuadro {
-  background: linear-gradient(135deg, #ffffff, #f2f7ff); /* Fondo suave */
-  padding: 30px;
-  border-left: 6px solid #0077cc; /* Borde izquierdo distintivo */
-  border-radius: 12px; /* Bordes redondeados */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Sombra suave */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
-}
-
-/* Efecto al pasar el cursor sobre las cajas de Misión y Visión */
-.cuadro:hover {
-  transform: translateY(-5px); /* Desplazamiento hacia arriba */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); /* Sombra más pronunciada */
-}
-
-/* Títulos de Misión y Visión */
-.cuadro h3 {
-  margin: 0 0 15px 0;
-  color: #003366; /* Color del texto */
-  font-size: 1.6em;
-  border-bottom: 2px solid #0077cc; /* Subrayado para dar énfasis */
-  padding-bottom: 5px;
-  font-weight: bold; /* Negrita */
-}
-
-/* Párrafos dentro de Misión y Visión */
-.cuadro p {
-  margin: 0;
-  color: #333; /* Color oscuro para mejor contraste */
-  font-size: 1.1em;
-  line-height: 1.7;
-  font-family: 'Poppins', sans-serif; /* Fuente moderna */
-}
-
-/* Responsividad: Ajustes para pantallas más pequeñas */
-@media screen and (max-width: 768px) {
-  .mision-vision {
-    padding: 0 15px; /* Menos espacio lateral */
-  }
-
-  .cuadro {
-    padding: 20px; /* Menos relleno en pantallas pequeñas */
-  }
-
-  .cuadro h3 {
-    font-size: 1.4em; /* Ajuste del tamaño de los títulos */
-  }
-
-  .cuadro p {
-    font-size: 1em; /* Ajuste del tamaño del párrafo */
-  }
-}
-
-@media (max-width: 768px) {
-  header img {
-    width: 100px;
-    height: auto;
-  }
-
-  nav {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  nav a {
-    font-size: 1em;
-    margin: 10px 0;
-  }
-
-  .hero {
-    height: auto;
-    padding: 40px 20px;
-  }
-
-  .hero h1 {
-    font-size: 2em;
-  }
-
-  .hero p {
-    font-size: 1em;
-    max-width: 100%;
-  }
-
-  .content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  .image-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .image-container img {
-    width: 90%;
-  }
-
-  .contenedor-inicio {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .panel, .Fotoinicio {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .extra-info {
-    width: 95%;
-    padding: 20px;
-  }
-
-  .cuadro {
-    padding: 20px;
-  }
-
-  .cuadro h3 {
-    font-size: 1.3em;
-  }
-
-  .cuadro p {
-    font-size: 1em;
-  }
+.highlight {
+    color: #00A6FB;
+    font-weight: 600;
 }

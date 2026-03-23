@@ -1,17 +1,16 @@
-const scrollToTopButton = document.getElementById('scrollToTop');
-// Mostrar el botón cuando se desplaza hacia abajo
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollToTopButton.style.display = 'flex';
-    } else {
-        scrollToTopButton.style.display = 'none';
-    }
-});
+const scrollBtn = document.getElementById('scrollToTop');
 
-// Función para volver al inicio
- scrollToTopButton.addEventListener('click', () => {
+window.onscroll = function() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+};
+
+scrollBtn.onclick = function() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Desplazamiento suave
-     });
-});
+        behavior: 'smooth'
+    });
+};

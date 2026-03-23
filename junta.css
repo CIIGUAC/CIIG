@@ -1,397 +1,272 @@
-/* Estilos básicos para el diseño */
+:root {
+    --primary: #022B3A;      /* Azul Marino profundo */
+    --accent: #004d71;       /* Azul Grisáceo */
+    --white: #ffffff;
+    --gray-bg: #f9f9f9;
+    --text-dark: #1a1a1a;
+    --text-light: #666;
+    --gmail-color: #db4437;  /* Color oficial Gmail */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FAF3E0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+    color: var(--text-dark);
 }
 
-header {
-    background-color: #022B3A;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+/* NAVBAR (Igual que Inicio - Profesional) */
+.navbar { background: var(--white); padding: 15px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #eee; }
+.nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 40px; }
+.nav-list { display: flex; list-style: none; gap: 25px; }
+.nav-link { text-decoration: none; color: var(--text-dark); font-size: 0.85rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: 0.3s; }
+.nav-link:hover, .nav-link.active { color: var(--accent); }
+.main-logo { width: 70px; height: 70px; border-radius: 50%; border: 2px solid var(--primary); }
+.social-aside { display: flex; gap: 15px; }
+.social-btn { text-decoration: none; color: #aaa; font-size: 0.75rem; font-weight: bold; transition: 0.3s; }
+.social-btn:hover { color: var(--accent); }
+
+/* HERO */
+.hero-minimal { padding: 100px 20px 40px; text-align: center; }
+.badge { background: var(--gray-bg); padding: 7px 18px; border-radius: 30px; font-size: 0.7rem; color: var(--primary); font-weight: 600; }
+h1 { font-size: 3.5rem; margin: 20px 0; font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary); }
+.highlight { color: var(--accent); }
+
+/* GRID DE MIEMBROS - DISEÑO CIRCULAR PREMIUM */
+.directors-grid {
+    max-width: 1300px;
+    margin: 40px auto 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 40px;
+    padding: 0 40px;
 }
 
-.extra-space {
-    height: 100px; /* Ajusta la altura según sea necesario */
+.member-profile {
+    background: var(--white);
+    border: 1px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.4s;
 }
 
-nav {
-  position: sticky; /* Cambiado para que se quede fijo al hacer scroll */
-  top: 0; /* Fija la barra en la parte superior */
-  width: 100%; /* Ocupará todo el ancho de la página */
-  background: #1C3144; /* Gris oscuro complementario */
-  display: flex;
-  justify-content: center; /* Centra los enlaces */
-  align-items: center; /* Asegura que los elementos estén verticalmente alineados */
-  padding: 10px 0; /* Relleno superior e inferior */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para crear profundidad */
-  z-index: 10; /* Asegura que la barra de navegación esté por encima de otros contenidos */
+.member-profile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+    border-color: transparent;
 }
 
-nav a {
-  color: white;
-  text-decoration: none; /* Elimina subrayado */
-  font-size: 1.2em; /* Tamaño de fuente adecuado */
-  margin: 0 20px; /* Espaciado entre enlaces */
-  text-transform: uppercase; /* Hace los enlaces en mayúsculas */
-  font-weight: bold; /* Hace el texto en negrita */
-  transition: all 0.3s ease; /* Animación suave para los cambios */
-}
-
-nav a:hover {
-  color: #6c6c6c; /* Cambio de color al pasar el mouse por encima */
-  transform: scale(1.1); /* Efecto de aumento para darle un toque interactivo */
-}
-
-#content {
-    padding: 20px;
-    display: flex;
-    justify-content: center; /* Centra los bloques horizontalmente */
-    align-items: flex-start; /* Alinea los bloques al principio de la sección */
-    flex-direction: column; /* Asegura que los bloques estén apilados verticalmente */
-    min-height: calc(100vh - 180px); /* Usar min-height para asegurar que el contenido siempre tenga espacio */
-}
-
-.section {
-    display: none;
-}
-
-.section.active {
-    display: block;
-}
-
-footer {
-    background: #022B3A; /* Fondo negro */
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-.card li {
-  margin: 3px 0;
-  font-size: 20px;
-  color: #FFFFFF;
-  text-align: left;
-}
-
-.card ul {
-  margin-top: 10px; /* Ajusta este valor según la separación que desees */
-}
-
-/* Boton*/
-#scrollToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
-}
-
-#scrollToTop:hover {
-    background-color: #555;
-}
-
-.cards-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 25px; /* Aumentar separación entre tarjetas */
-}
-
-.card {
-  width: 25em; /* Tarjeta más ancha */
-  height: 35em; /* Tarjeta más alta */
-  background: linear-gradient(135deg, #1D3557, #457B9D);
-  transition: 1s ease-in-out;
-  clip-path: polygon(40px 0%, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0% 40px);
-  border-top-right-radius: 25px;
-  border-bottom-left-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  padding: 2em; /* Más espacio interno */
-  margin-bottom: 2.5em;
-  overflow: hidden; /* Evitar desbordamientos */
-  justify-content: space-between;
-  font-family: 'Poppins', sans-serif; /* Fuente principal */
-}
-
-.card span {
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  display: block;
-  font-size: 2em; /* Más grande */
-  flex-shrink: 0;
-  margin-bottom: 0.5em;
-  font-family: 'Lobster', cursive; /* Fuente decorativa para los títulos */
-  font-weight: 700;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
-}
-
-.card .info {
-  font-weight: 400;
-  color: white;
-  text-align: center;
-  margin: -1em 0; /* Reducir margen */
-  white-space: normal; /* Permitir salto de línea */
-  overflow: visible; /* Asegurar que el contenido sea visible */
-  text-overflow: unset; /* No cortar el texto */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em; /* Agrandar */
-  font-weight: 500; /* Más grueso */
-  line-height: 1.4; /* Mejor separación */
-}
-
-.card .img {
-  width: 10em; /* Imagen más grande */
-  height: 10em;
-  margin: 0 auto 1.5em; /* Centrar y ajustar espacio inferior */
-  border-radius: 30px; /* Borde redondeado más pronunciado */
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.card .img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajuste perfecto para imágenes */
-}
-
-.card .share {
-  margin-top: 1em;
-  display: flex;
-  justify-content: center;
-  gap: 1.5em; /* Espaciado mayor entre íconos */
-  flex-shrink: 0;
-}
-
-.card .info:hover {
-  white-space: normal; /* Permite que el texto haga salto de línea */
-  overflow: visible; /* Muestra todo el contenido */
-  text-overflow: unset; /* Quita los puntos suspensivos */
-}
-
-.card a {
-  color: white;
-  transition: .4s ease-in-out;
-  font-size: 1.1em; /* Aumentar tamaño de los enlaces */
-}
-
-.card .img img:hover {
-  filter: brightness(1.2); /* Incrementa el brillo */
-  transform: scale(1.1); /* Amplía ligeramente la imagen */
-  transition: 0.4s ease; /* Transición suave */
-}
-
-.card .share a:hover {
-  transform: rotate(10deg); /* Rota ligeramente el ícono */
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.3); /* Sombra con un tono rojo */
-  transform: scale(1.05); /* Ligeramente más grande */
-  transition: 0.4s ease; /* Suavidad en la transición */
-}
-
-.card:hover {
-  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.3); /* Sombra roja */
-  transform: scale(1.05); /* Efecto de agrandamiento */
-  transition: 0.4s ease;
-}
-
-.card a:hover {
-  color: red;
-  text-shadow: 0 0 10px red; /* Brillo del enlace */
-  transform: translateY(-2px); /* Mueve ligeramente hacia arriba */
-  transition: 0.3s ease;
-}
-
-
-  .gmail-link {
-    text-decoration: none;
+/* HEADER DEL PERFIL (Foto y Título) */
+.profile-header {
     display: flex;
     align-items: center;
-    gap: 0.5em; /* Espacio entre el logo y el texto */
-    color: white;
-    font-size: 1.5em;
+    gap: 25px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
 }
 
-.gmail-link:hover {
-    color: red; /* Cambia el color del texto al pasar el cursor */
+/* FOTO CIRCULAR CON ACENTO DINÁMICO */
+.profile-img-container {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
 }
 
-.gmail-logo {
-    width: 3em; /* Tamaño del logo */
-    height: auto;
-    transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.gmail-link:hover .gmail-logo {
-    filter: drop-shadow(0 0 10px red); /* Efecto de brillo rojo */
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-}
-
-/* Sección contenedora en forma de rectángulo */
-.extra-info {
-  width: 80%;
-  margin: 50px auto;
-  padding: 40px;
-  background: linear-gradient(135deg, #1d3557, #457b9d);
-  border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Poppins', sans-serif; /* Fuente general */
-}
-
-/* Efecto al pasar el cursor */
-.extra-info:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Título principal llamativo */
-.extra-title {
-  font-size: 32px;
-  font-weight: 700;
-  color: #f8f9fa;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-family: 'Lobster', cursive; /* Fuente elegante para el título */
-}
-
-/* Párrafos de información */
-.extra-text {
-  font-size: 20px;
-  color: #e9ecef;
-  margin-bottom: 15px;
-  line-height: 1.6;
-  font-family: 'Merriweather', serif; /* Nueva fuente para el texto */
-  font-weight: 300;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lobster&display=swap');
-
-.card {
-  font-family: 'Poppins', sans-serif; /* Fuente principal */
-}
-
-.imagen-circular {
-  width: 100px;  /* Ajusta el tamaño según sea necesario */
-  height: 100px;
-  border-radius: 50%; /* Hace que la imagen sea circular */
-  object-fit: cover;  /* Ajusta la imagen sin deformarla */
-  border: 3px solid #fff; /* Borde opcional */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
-}
-
-/* Responsividad: Ajustes para pantallas más pequeñas */
-@media screen and (max-width: 768px) {
-  .mision-vision {
-    padding: 0 15px; /* Menos espacio lateral */
-  }
-
-  .cuadro {
-    padding: 20px; /* Menos relleno en pantallas pequeñas */
-  }
-
-  .cuadro h3 {
-    font-size: 1.4em; /* Ajuste del tamaño de los títulos */
-  }
-
-  .cuadro p {
-    font-size: 1em; /* Ajuste del tamaño del párrafo */
-  }
-}
-
-@media (max-width: 768px) {
-  header img {
-    width: 100px;
-    height: auto;
-  }
-
-  nav {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  nav a {
-    font-size: 1em;
-    margin: 10px 0;
-  }
-
-  .hero {
-    height: auto;
-    padding: 40px 20px;
-  }
-
-  .hero h1 {
-    font-size: 2em;
-  }
-
-  .hero p {
-    font-size: 1em;
-    max-width: 100%;
-  }
-
-  .content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  .image-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .image-container img {
-    width: 90%;
-  }
-
-  .contenedor-inicio {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .panel, .Fotoinicio {
+.profile-img-container img {
     width: 100%;
-    padding: 20px;
-  }
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 2;
+    position: relative;
+}
 
-  .extra-info {
-    width: 95%;
-    padding: 20px;
-  }
+.profile-accent {
+    position: absolute;
+    top: -5px; left: -5px; width: 120px; height: 120px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.4s;
+}
 
-  .cuadro {
-    padding: 20px;
-  }
+.member-profile:hover .profile-accent { opacity: 0.2; transform: scale(1.05); }
 
-  .cuadro h3 {
-    font-size: 1.3em;
-  }
+/* TÍTULO Y CARGO */
+.profile-title h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+    font-family: 'Montserrat';
+    margin-bottom: 3px;
+}
 
-  .cuadro p {
-    font-size: 1em;
-  }
+.role {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* CUERPO DEL PERFIL */
+.profile-body .specialty {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+/* FOOTER DEL PERFIL */
+.profile-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.age { font-size: 0.8rem; color: #aaa; }
+
+.contact-btn {
+    background: var(--gray-bg);
+    color: var(--gmail-color);
+    border: 1px solid #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: var(--gmail-color);
+    color: var(--white);
+    box-shadow: 0 5px 15px rgba(219, 68, 55, 0.3);
+}
+
+/* FOOTER (Igual que Inicio - Profesional) */
+.main-footer { background: #111; color: #eee; padding: 80px 40px 30px; margin-top: 100px; }
+.footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; }
+.footer-logo { width: 80px; filter: grayscale(1); margin-bottom: 20px; opacity: 0.7; }
+.footer-col h4 { color: white; margin-bottom: 25px; font-family: 'Montserrat'; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
+.footer-col ul { list-style: none; }
+.footer-col ul li a { color: #888; text-decoration: none; transition: 0.3s; font-size: 0.9rem; }
+.footer-bottom { margin-top: 60px; text-align: center; font-size: 0.8rem; border-top: 1px solid #222; padding-top: 30px; color: #555; }
+
+/* BOTÓN SCROLL */
+#scrollToTop { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--primary); color: white; border: none; border-radius: 4px; cursor: pointer; display: none; font-size: 20px; z-index: 1000; }
+
+/* FOOTER GENERAL */
+.main-footer {
+    background-color: #01161E; /* Azul oscuro profundo */
+    color: #ffffff;
+    padding: 60px 20px 20px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CONTENEDOR QUE CENTRA EL CONTENIDO */
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Esto separa las columnas uniformemente */
+    gap: 40px;
+    flex-wrap: wrap; /* Para que en celular se pongan uno debajo de otro */
+}
+
+/* ESTILO DE CADA COLUMNA */
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h4 {
+    color: #00A6FB; /* Color de acento */
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* AJUSTES DE LOS ÍTEMS DE CONTACTO */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.contact-item .icon {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #d1d1d1;
+}
+
+/* LOGO Y MARCA */
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #00A6FB;
+    margin-bottom: 15px;
+}
+
+.brand h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.brand p {
+    font-size: 0.85rem;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+/* ENLACES */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #d1d1d1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+/* BARRA INFERIOR */
+.footer-bottom {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.highlight {
+    color: #00A6FB;
+    font-weight: 600;
 }
